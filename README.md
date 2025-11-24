@@ -57,9 +57,9 @@ Represents **how public the data generated/collected by this activity is**:
 | ----- | ------------------------------------------ |
 | 0-2     | Fully public / internet accessible         |
 | 2-4     | Public but limited visibility              |
-| 4-6     | Semi-private / logged by third parties     |
-| 6-8     | Restricted / internal company only         |
-| 8-9     | Controlled / minimal access / private data |
+| 4-6     | Semi-private / internal minor companies + encrypted     |
+| 6-8     | Restricted / local only not encrypted         |
+| 8-9     | Controlled / local only + password protected + encrypted |
 
 > Important: **highly sensitive activities should not map to B=0**, to avoid dangerous public exposure.
 
