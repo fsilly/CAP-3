@@ -1,9 +1,9 @@
-# 📘 **CAP-3: Privilege & Privacy-Aware Activity Compartment Codes**
+# 🔐 **CAP-3: Privilege & Privacy-Aware Activity Compartment Codes**
 
 
 ## 0. Presentation
 CAP-3 stands for Compartmentalized activity & privacy 3 digit.
-It's meant for email generations or account name generations while raising user's awarness of the sensivity and exposure of their data online.
+It's meant for email and username generations or account name generations while raising user's awarness of the sensivity and exposure of their data online.
 
 Here is an example :
 `alice.nguyen522@proton.com` could be an email use for a league of legends account.
@@ -12,7 +12,9 @@ Here is an example :
 - `2` stands for low sensitivity activity (not health or banking), how sensitive do YOU feel about data being collected about this activity
 - while `alice.nguyen` is a copmpletely fictive name formated this way to avoid robot protections.
 
-Most of your emails will start with 5 let's be honest, however your bitwarden email should start with `F` or `9` for example.
+Most of your emails will start with 5, however your bitwarden email should start with `F` or `9` for example.
+An email adress is somewhat protected while exposed so the 2nd digit should be between 3 and 7
+Finally the last digit is the value the data held by this account is precious to you.
 
 ## 1. Overview
 
@@ -25,13 +27,36 @@ Each 3-digit code follows the pattern:
 ```
 A B C
 │ │ └── Activity Sensitivity / Privacy (low → high)
-│ └──── Data Exposure Level (0 = fully public → 4 = restricted public)
+│ └──── Data Exposure Level (0 = fully public → 10 = local + encrypted )
 └────── Inward Privileges / Actor Sensitivity (0 = normal → F = vault)
 ```
 
+## 2. Usage
+Originally this was meant for username generation for personnal usage.
+For example if I wanf to create a new email account that will hold a league of legends account I could give it the name of
+* thiery.beauchamp654@cocks.li
+
+Exposing directly the level of privacy held by the account.
+A more secure way of using CAP-3 would be :
+* marc.platreuxxxddd@cocks.li (helding the league account)
+
+saving the credentials of this email account on a password manager under the name :
+* Docteur Lachatte#euw 654
+
+Protecting the digits
+
+## 3. Security
+As explained above, the security of the usage of this code relies on the multiplicity of this method on a public AND individual level.
+While also looking and mimicking somewhat common username usage.
+
+A great number of people using this code in different ways could be a way to protect its users.
+But also its notoriety compromises its purpose.
+
+
+**ai slop**
 ---
 
-## 2. Code Architecture
+## 4. Code Architecture
 
 ### **Digit 1 — Inward Privileges / Actor Sensitivity (A)**
 
@@ -74,20 +99,20 @@ Represents the **intrinsic privacy of the activity itself**:
 | 0–2   | Low-sensitivity activity (gardening, hobbies, general browsing)          |
 | 3–5   | Medium-sensitivity (health, social posts, financial tracking)            |
 | 6–7   | High-sensitivity (banking, confidential work)                            |
-| 8–9   | Critical / top-secret activity (cryptography, credentials, vault access) |
+| 8–9   | Critical / top-secret activity (cryptography, ssh, vault access) |
 
 ---
 
-## 3. Generating a Code
-
+## 5. Generating a Code
+mmm.  l n. llml
 1. **Determine Inward Privilege (Digit A)**
 
    * Who can perform/use this activity?
    * Examples:
 
-     * Standard personal hobby → `0`
-     * Accessing company HR data → `4`
-     * Admin system operations → `7`
+     * Account holds no privileges → `0`
+     * Account used for community moderation → `4`
+     * Admin devops operations → `7`
      * Vault-level credentials → `F`
 
 2. **Determine Data Exposure (Digit B)**
@@ -95,8 +120,8 @@ Represents the **intrinsic privacy of the activity itself**:
    * How public is the data generated/collected by this activity?
    * Examples:
 
-     * Public gardening posts → `0`
-     * Health tracking in a private app → `3`
+     * Publicly exposed username → `0`
+     * username is a little protected → `3`
      * Bank transactions → `4`
 
 3. **Determine Activity Sensitivity (Digit C)**
@@ -137,3 +162,5 @@ Represents the **intrinsic privacy of the activity itself**:
 
 * `909` → Publicly available + top-secret credentials → invalid
 * `F00` → Vault access + fully public → invalid
+
+
