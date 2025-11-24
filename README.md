@@ -12,6 +12,8 @@ Here is an example :
 - `2` stands for low sensitivity activity (not health or banking), how sensitive do YOU feel about data being collected about this activity
 - while `alice.nguyen` is a copmpletely fictive name formated this way to avoid robot protections.
 
+Most of your emails will start with 5 let's be honest, however your bitwarden email should start with `F` or `9` for example.
+
 ## 1. Overview
 
 * **Who can access/use the activity** (privilege/sensitivity)
