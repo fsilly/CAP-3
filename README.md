@@ -2,8 +2,9 @@
 
 
 ## 0. Presentation
-CAP-3 stands for Compartmentalized activity & privacy 3 digit.
+CAP-3 stands for Compartmentalized activity & privacy.
 It's meant for email and username generations or account name generations while raising user's awarness of the sensivity and exposure of their data online.
+It is meant for password managers.
 
 Here is an example :
 `alice.nguyen522@proton.com` could be an email use for a league of legends account.
