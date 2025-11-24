@@ -1,7 +1,18 @@
 # 📘 **CAP-3: Privilege & Privacy-Aware Activity Compartment Codes**
 
 
-# 1. Overview
+## 0. Presentation
+CAP-3 stands for Compartmentalized activity & privacy 3 digit.
+It's meant for email generations or account name generations while raising user's awarness of the sensivity and exposure of their data online.
+
+Here is an example :
+`alice.nguyen522@proton.com` could be an email use for a league of legends account.
+- `5` stands for *admin level* access (managing the league account)
+- `2` stands for limited (niche) but publicly available account (league), how data is exposed outside of your control 
+- `2` stands for low sensitivity activity (not health or banking), how sensitive do YOU feel about data being collected about this activity
+- while `alice.nguyen` is a copmpletely fictive name formated this way to avoid robot protections.
+
+## 1. Overview
 
 * **Who can access/use the activity** (privilege/sensitivity)
 * **How public the data collected by this activity is** (data exposure)
@@ -18,9 +29,9 @@ A B C
 
 ---
 
-# 2. Code Architecture
+## 2. Code Architecture
 
-## **Digit 1 — Inward Privileges / Actor Sensitivity (A)**
+### **Digit 1 — Inward Privileges / Actor Sensitivity (A)**
 
 Represents the **privilege level required to perform or access this activity**:
 
@@ -36,23 +47,23 @@ Represents the **privilege level required to perform or access this activity**:
 
 ---
 
-## **Digit 2 — Data Exposure / Publicness (B)**
+### **Digit 2 — Data Exposure / Publicness (B)**
 
 Represents **how public the data generated/collected by this activity is**:
 
 | Digit | Meaning                                    |
 | ----- | ------------------------------------------ |
-| 0     | Fully public / internet accessible         |
-| 1     | Public but limited visibility              |
-| 2     | Semi-private / logged by third parties     |
-| 3     | Restricted / internal company only         |
-| 4     | Controlled / minimal access / private data |
+| 0-2     | Fully public / internet accessible         |
+| 2-4     | Public but limited visibility              |
+| 4-6     | Semi-private / logged by third parties     |
+| 6-8     | Restricted / internal company only         |
+| 8-9     | Controlled / minimal access / private data |
 
 > Important: **highly sensitive activities should not map to B=0**, to avoid dangerous public exposure.
 
 ---
 
-## **Digit 3 — Activity Sensitivity / Privacy (C)**
+### **Digit 3 — Activity Sensitivity / Privacy (C)**
 
 Represents the **intrinsic privacy of the activity itself**:
 
@@ -65,7 +76,7 @@ Represents the **intrinsic privacy of the activity itself**:
 
 ---
 
-# 3. Generating a Code
+## 3. Generating a Code
 
 1. **Determine Inward Privilege (Digit A)**
 
